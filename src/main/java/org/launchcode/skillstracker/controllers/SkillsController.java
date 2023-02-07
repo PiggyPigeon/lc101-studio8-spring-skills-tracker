@@ -40,6 +40,7 @@ public class SkillsController {
                 "<label for='favorite'>My favorite language: </label>" +
                 "<br>" +
                 "<select name='favorite' id='favorite'>" +
+                "<option value = ''>--</option>" +
                 "<option value='Javascript'>JavaScript</option>" +
                 "<option value ='Java'>Java</option>" +
                 "<option value ='Python'>Python</option>" +
@@ -50,6 +51,7 @@ public class SkillsController {
                 "<label for='secondFavorite'>My second favorite language: </label>" +
                 "<br>" +
                 "<select name='secondFavorite' id='secondFavorite'>" +
+                "<option value = ''>--</option>" +
                 "<option value='Javascript'>JavaScript</option>" +
                 "<option value ='Java'>Java</option>" +
                 "<option value ='Python'>Python</option>" +
@@ -60,6 +62,7 @@ public class SkillsController {
                 "<label for='thirdFavorite'>My third favorite language: </label>" +
                 "<br>" +
                 "<select name='thirdFavorite' id='thirdFavorite'>" +
+                "<option value = ''>--</option>" +
                 "<option value='Javascript'>JavaScript</option>" +
                 "<option value ='Java'>Java</option>" +
                 "<option value ='Python'>Python</option>" +
@@ -83,14 +86,14 @@ public class SkillsController {
         if (name == "") {
             name = "Butts";
         }
-        if (favorite == null) {
+        if (favorite == "") {
             favorite = "farts";
         }
-        if (secondFavorite == null) {
+        if (secondFavorite == "") {
             secondFavorite = "fizzlers";
         }
-        if (thirdFavorite == null) {
-            thirdFavorite = "crack splitter";
+        if (thirdFavorite == "") {
+            thirdFavorite = "crack splitters";
         }
         //add validation to make sure they cannot pick the same language more than once
         return submitForm(name, favorite, secondFavorite, thirdFavorite);
